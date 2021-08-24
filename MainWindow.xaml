@@ -1,0 +1,30 @@
+﻿<Window x:Class="ThePCADDash_Final.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThePCADDash_Final"
+        mc:Ignorable="d"
+        Title="The PCAD Dash!!" Height="419" Width="799" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        xmlns:gif ="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
+        >
+    <Canvas x:Name="PCAD2" Focusable="True" KeyDown="KeyisDown" KeyUp="KeyisUp" Background="LightBlue">
+        <Rectangle x:Name="background" Height="400" Width="1262" Fill="Orange" />
+        <Rectangle x:Name="background2" Height="400" Width="1262" Fill="LightGreen" Canvas.Left="1262" />
+        <Rectangle x:Name="ground" Height="32" Width="800" Fill="Black" Canvas.Top="387" Canvas.Left="0" />
+        <Rectangle x:Name="player" Height="99" Width="67" Fill="Brown" Canvas.Top="151" Canvas.Left="110" />
+        <Rectangle x:Name="obstacle" Height="178" Width="50" Fill="Red" Canvas.Top="320" Canvas.Left="721" />
+        <Label x:Name="Score" FontSize="22" FontWeight="Bold" Content="Score: 0" />
+        <Button x:Name="Back" Content="Back" Canvas.Left="707" Canvas.Top="120" Width="82" Height="25" Click="Back_Click"/>
+        <Ellipse Fill="Red"
+                     Height="26"
+                     Width="27"
+                     Canvas.Left="762" Canvas.Top="10" MouseLeftButtonDown="CloseGame"
+                     />
+        <Ellipse Fill="Yellow"
+                     Height="26"
+                     Width="27"
+                     Canvas.Left="721" Canvas.Top="10" RenderTransformOrigin="0.222,2.154" MouseLeftButtonDown="MinimizeGame" 
+                     />
+    </Canvas>
+</Window>
